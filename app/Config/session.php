@@ -59,7 +59,7 @@ return [
     // The session cookie path determines the path for which the cookie will
     // be regarded as available. Typically, this will be the root path of
     // your application but you are free to change this when necessary.
-    'path' => '/' . (explode('/', env('APP_URL', ''), 4)[3] ?? ''),
+    'path' => '/',
 
     // Session Cookie Domain
     // Here you may change the domain of the cookie used to identify a session
@@ -77,7 +77,7 @@ return [
     // HTTP Access Only
     // Setting this value to true will prevent JavaScript from accessing the
     // value of the cookie and the cookie will only be accessible through the HTTP protocol.
-    'http_only' => true,
+    'http_only' => false,
 
     // Same-Site Cookies
     // This option determines how your cookies behave when cross-site requests

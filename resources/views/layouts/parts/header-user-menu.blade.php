@@ -27,8 +27,8 @@
         <li>
             @include('common.dark-mode-toggle', ['classes' => 'icon-item'])
         </li>
-        <!-- <li><hr></li> -->
-        <!-- <li>
+        <li><hr></li>
+        <li>
             @php
                 $logoutPath = match (config('auth.method')) {
                     'saml2' => '/saml2/logout',
@@ -36,13 +36,10 @@
                     default => '/logout',
                 }
             @endphp
-            <form action="{{ url($logoutPath) }}" method="post">
-                {{ csrf_field() }}
-                <button class="icon-item" data-shortcut="logout">
-                    @icon('logout')
-                    <div>{{ trans('auth.logout') }}</div>
-                </button>
-            </form>
-        </li> -->
+            <button class="icon-item" data-shortcut="logout" id="logout_btn">
+                @icon('logout')
+                <div>{{ trans('auth.logout') }}</div>
+            </button>
+        </li>
     </ul>
 </div>
